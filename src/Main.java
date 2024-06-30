@@ -28,19 +28,25 @@ public class Main {
             valorDoComputador = (int) (Math.random() * 10);
             System.out.println("Computador: " + valorDoComputador);
 
-            if((valorDoJogador + valorDoComputador) % 2 == 0){
-                if (escolhaDoJogador.equals("par")){
+            if ((valorDoJogador + valorDoComputador) % 2 == 0) {
+                if (escolhaDoJogador.equals("par")) {
+                    vitoriasDoJogador++;
                     System.out.println("Você venceu!");
-                } else{
+                } else {
+                    vitoriasDoComputador++;
                     System.out.println("O computador venceu!");
                 }
             } else {
-                if (escolhaDoJogador.equals("impar")){
+                if (escolhaDoJogador.equals("impar")) {
+                    vitoriasDoJogador++;
                     System.out.println("Você venceu!");
-                } else{
+                } else {
+                    vitoriasDoComputador++;
                     System.out.println("O computador venceu!");
                 }
             }
+
+            System.out.println("Placar: " + vitoriasDoJogador + " x " + vitoriasDoComputador);
 
             System.out.print("Deseja realizar mais uma rodada? (s / n): ");
             novaRodada = sc.next().toLowerCase();
@@ -54,6 +60,8 @@ public class Main {
     static String escolhaDoComputador;
     static int valorDoJogador;
     static int valorDoComputador;
+    static int vitoriasDoJogador = 0;
+    static int vitoriasDoComputador = 0;
 
     public static void ladoDoComputador(String lado) {
         System.out.println("Computador: " + lado + "!");

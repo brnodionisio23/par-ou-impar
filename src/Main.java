@@ -18,12 +18,13 @@ public class Main {
 
             if(escolhaDoJogador.equals("par")) {
                 escolhaDoComputador = "impar";
+                ladoDoComputador(escolhaDoComputador);
             }
             else {
                 escolhaDoComputador = "par";
+                    ladoDoComputador(escolhaDoComputador);
             }
 
-            System.out.println(escolhaDoComputador);
 
             System.out.print("Deseja realizar mais uma rodada? (s / n): ");
             novaRodada = sc.next().toLowerCase();
@@ -35,4 +36,9 @@ public class Main {
     static String novaRodada;
     static String escolhaDoJogador;
     static String escolhaDoComputador;
+
+    public static void ladoDoComputador(String lado){
+        System.out.println("Computador: " + lado + "!");
+    }
+
 }

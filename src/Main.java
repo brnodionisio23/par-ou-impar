@@ -7,31 +7,36 @@ public class Main {
 
         novaRodada = "s";
 
-        System.out.println("BEM VINDO AO PAR OU IMPAR");
+        System.out.println("*** BEM VINDO AO PAR OU IMPAR ***");
         System.out.println(" ");
 
         while (novaRodada.equals("s")) {
-            System.out.println("Escolha: par ou impar");
+            System.out.print("Escolha um lado: Par ou Impar: ");
             escolhaDoJogador = sc.next();
 
             if (escolhaDoJogador.equals("par")) {
-                escolhaDoComputador = "impar";
+                escolhaDoComputador = "Impar";
                 ladoDoComputador(escolhaDoComputador);
             } else {
-                escolhaDoComputador = "par";
+                escolhaDoComputador = "Par";
                 ladoDoComputador(escolhaDoComputador);
             }
 
-            System.out.println("Digite um número entre 0 e 9");
+            System.out.print("Digite um número entre 0 e 9: ");
             valorDoJogador = sc.nextInt();
 
             valorDoComputador = (int) (Math.random() * 10);
             System.out.println("Computador: " + valorDoComputador);
 
-            if ((valorDoJogador + valorDoComputador) % 2 == 0) {
+            System.out.println(" ");
+
+            System.out.println("Resultado: " + resultadoDaSoma);
+
+            if (resultadoDaSoma % 2 == 0) {
                 if (escolhaDoJogador.equals("par")) {
                     vitoriasDoJogador++;
                     System.out.println("Você venceu!");
+
                 } else {
                     vitoriasDoComputador++;
                     System.out.println("O computador venceu!");
@@ -46,10 +51,15 @@ public class Main {
                 }
             }
 
+            System.out.println(" ");
             System.out.println("Placar: " + vitoriasDoJogador + " x " + vitoriasDoComputador);
+            System.out.println(" ");
 
             System.out.print("Deseja realizar mais uma rodada? (s / n): ");
             novaRodada = sc.next().toLowerCase();
+            System.out.println("");
+            System.out.println(("********************************"));
+            System.out.println("");
         }
 
         sc.close();
@@ -60,11 +70,13 @@ public class Main {
     static String escolhaDoComputador;
     static int valorDoJogador;
     static int valorDoComputador;
+    static int resultadoDaSoma = valorDoJogador + valorDoComputador;
     static int vitoriasDoJogador = 0;
     static int vitoriasDoComputador = 0;
 
     public static void ladoDoComputador(String lado) {
         System.out.println("Computador: " + lado + "!");
+        System.out.println(" ");
     }
 
 }

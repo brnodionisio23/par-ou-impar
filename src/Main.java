@@ -25,8 +25,8 @@ public class Main {
             System.out.print("Digite um número entre 0 e 9: ");
             valorDoJogador = sc.nextInt();
 
-            valorDoComputador = (int) (Math.random() * 10);
-            System.out.println("Computador: " + valorDoComputador);
+
+
 
             System.out.println(" ");
 

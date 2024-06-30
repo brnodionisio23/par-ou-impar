@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Jogador {
     Scanner sc = new Scanner(System.in);
 
-    public String ladoDoJogador(){
-        String ladoDoJogador = sc.next();
-        return ladoDoJogador;
+    public String lado(){
+        String lado = sc.next();
+        return lado;
     }
 
-    public int valorDoJogador(){
-        int valorDoJogador = sc.nextInt();
-        return valorDoJogador;
+    public int valor(){
+        int valor = sc.nextInt();
+        return valor;
     }
 }

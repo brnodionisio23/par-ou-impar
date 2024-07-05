@@ -22,11 +22,11 @@ public class Game {
 
     public void choosenPlayersSide() {
         System.out.print("Escolha um lado: Par ou Impar: ");
-        String aux = sc.next();
+        String aux = sc.next().toLowerCase();
 
         while (!aux.equals("par") && !aux.equals("impar")) {
             System.out.println("Lado invalido!, escreva: [par] ou [impar]");
-            aux = sc.next();
+            aux = sc.next().toLowerCase();
         }
 
         p1.setSide(aux);
@@ -54,7 +54,6 @@ public class Game {
             System.out.println("Computador: " + p2.getValue());
             System.out.println(" ");
         }
-
     }
 
     public int[] score(String p1Side, int p1Value, int p2Value) {
@@ -72,6 +71,5 @@ public class Game {
             }
         }
         return new int[]{p1Victories, p2Victories};
-
     }
 }

@@ -16,6 +16,7 @@ public class Game {
     }
 
     public void choosenPlayersSide() {
+        System.out.print("Escolha um lado: Par ou Impar: ");
         String aux = sc.next();
 
         while (!aux.equals("par") && !aux.equals("impar")) {
@@ -25,7 +26,29 @@ public class Game {
 
         p1.setSide(aux);
         p2.setSide(aux);
+        System.out.println("Computador: " + p2.getSide());
+        System.out.println(" ");
     }
 
-}
+    public void choosenPlayersValue() {
+        int aux = 0;
+        boolean inputIsValid = false;
 
+        while (!inputIsValid) {
+            System.out.print("Digite um valor: ");
+            if (sc.hasNextInt()) {
+                aux = sc.nextInt();
+                inputIsValid = true;
+            } else {
+                System.out.println("Valor inválido! Digite um número inteiro válido.");
+                sc.next();
+            }
+
+            p1.setValue(aux);
+            p2.setValue();
+            System.out.println("Computador: " + p2.getValue());
+            System.out.println(" ");
+        }
+
+    }
+}

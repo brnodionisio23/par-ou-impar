@@ -69,6 +69,14 @@ public class Game {
                 p2Victories++;
                 System.out.println("O computador venceu!");
             }
+        } else {
+            if (p1Side.equals("impar")) {
+                p1Victories++;
+                System.out.println("Você venceu!");
+            } else {
+                p2Victories++;
+                System.out.println("O computador venceu!");
+            }
         }
         return new int[]{p1Victories, p2Victories};
     }

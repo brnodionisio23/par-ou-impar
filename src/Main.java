@@ -16,5 +16,6 @@ public class Main {
             System.out.println("Deseja realizar nova partida? [S / N]");
             novaPartida = sc.next().toLowerCase();
         }
+        System.out.println("Jogo finalizado");
     }
 }

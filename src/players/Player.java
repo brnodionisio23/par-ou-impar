@@ -1,4 +1,4 @@
-package Players;
+package players;
 
 public class Player {
     String side;
@@ -19,5 +19,4 @@ public class Player {
     public void setValue(int value) {
         this.value = value;
     }
-
 }

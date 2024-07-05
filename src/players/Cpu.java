@@ -1,4 +1,4 @@
-package Players;
+package players;
 
 public class Cpu {
     String side;
@@ -14,7 +14,6 @@ public class Cpu {
         } else {
             this.side = "par";
         }
-
     }
 
     public int getValue() {
@@ -22,7 +21,6 @@ public class Cpu {
     }
 
     public void setValue() {
-
         this.value = (int) (Math.random() * 10);
     }
 }
